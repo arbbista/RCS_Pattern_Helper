@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="Main">
-  <grid id="27dc6" binding="MainJpanel" layout-manager="GridLayoutManager" row-count="9" column-count="17" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+  <grid id="27dc6" binding="MainJpanel" layout-manager="GridLayoutManager" row-count="9" column-count="15" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
     <margin top="10" left="10" bottom="25" right="10"/>
     <constraints>
-      <xy x="20" y="20" width="839" height="953"/>
+      <xy x="20" y="20" width="1436" height="1182"/>
     </constraints>
     <properties>
       <background color="-12828863"/>
@@ -15,7 +15,7 @@
     <children>
       <component id="51f27" class="javax.swing.JButton" binding="buildButton" default-binding="true">
         <constraints>
-          <grid row="7" column="0" row-span="1" col-span="17" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <grid row="7" column="0" row-span="1" col-span="15" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <background color="-11775918"/>
@@ -26,7 +26,7 @@
       </component>
       <component id="88f28" class="javax.swing.JLabel">
         <constraints>
-          <grid row="4" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
             <preferred-size width="122" height="16"/>
           </grid>
         </constraints>
@@ -37,13 +37,13 @@
       </component>
       <component id="85c63" class="javax.swing.JToolBar$Separator">
         <constraints>
-          <grid row="6" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties/>
       </component>
       <tabbedpane id="42955" binding="tabbedPane">
         <constraints>
-          <grid row="2" column="0" row-span="1" col-span="17" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+          <grid row="1" column="0" row-span="1" col-span="15" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
             <preferred-size width="200" height="200"/>
           </grid>
         </constraints>
@@ -515,7 +515,7 @@
                 </constraints>
                 <properties>
                   <background color="-4144187"/>
-                  <margin top="2" left="5" bottom="2" right="5"/>
+                  <margin top="2" left="6" bottom="2" right="6"/>
                   <text value=""/>
                   <toolTipText value="E.x.: PersonModel"/>
                 </properties>
@@ -533,7 +533,7 @@
             </properties>
             <border type="none"/>
             <children>
-              <grid id="675d7" binding="RCSToolsJPanel" layout-manager="GridLayoutManager" row-count="22" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+              <grid id="675d7" binding="RCSToolsJPanel" layout-manager="GridLayoutManager" row-count="23" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
                 <margin top="0" left="0" bottom="0" right="0"/>
                 <constraints>
                   <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="1" fill="1" indent="0" use-parent-layout="false"/>
@@ -569,7 +569,7 @@
                   </component>
                   <component id="df33" class="javax.swing.JSeparator">
                     <constraints>
-                      <grid row="7" column="0" row-span="1" col-span="3" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                      <grid row="8" column="0" row-span="1" col-span="3" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
                     </constraints>
                     <properties/>
                   </component>
@@ -581,7 +581,7 @@
                   </component>
                   <component id="6a6ce" class="javax.swing.JLabel">
                     <constraints>
-                      <grid row="8" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                      <grid row="9" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
                         <preferred-size width="59" height="16"/>
                       </grid>
                     </constraints>
@@ -591,32 +591,9 @@
                       <text value="RCS method adder"/>
                     </properties>
                   </component>
-                  <component id="43a5b" class="javax.swing.JComboBox" binding="methodReturnTypeMethodAdderComboBox">
-                    <constraints>
-                      <grid row="14" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="0" fill="0" indent="0" use-parent-layout="false">
-                        <preferred-size width="167" height="25"/>
-                      </grid>
-                    </constraints>
-                    <properties>
-                      <background color="-4144187"/>
-                      <font style="0"/>
-                      <model>
-                        <item value="void"/>
-                        <item value="String"/>
-                        <item value="long"/>
-                        <item value="int"/>
-                        <item value="boolean"/>
-                        <item value="char"/>
-                        <item value="byte"/>
-                        <item value="short"/>
-                        <item value="float"/>
-                        <item value="double"/>
-                      </model>
-                    </properties>
-                  </component>
                   <component id="f0270" class="javax.swing.JTextField" binding="methodNameMethodAdderTextBox">
                     <constraints>
-                      <grid row="14" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                      <grid row="15" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                         <preferred-size width="150" height="25"/>
                       </grid>
                     </constraints>
@@ -680,24 +657,9 @@
                       <text value=""/>
                     </properties>
                   </component>
-                  <component id="52f59" class="javax.swing.JButton" binding="MethodReplacerButton">
-                    <constraints>
-                      <grid row="5" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false">
-                        <minimum-size width="100" height="25"/>
-                        <preferred-size width="100" height="25"/>
-                        <maximum-size width="100" height="25"/>
-                      </grid>
-                    </constraints>
-                    <properties>
-                      <background color="-11775918"/>
-                      <font style="0"/>
-                      <foreground color="-5460820"/>
-                      <text value="Replace"/>
-                    </properties>
-                  </component>
                   <component id="de448" class="javax.swing.JTextField" binding="prefixMethodAdderTextBox">
                     <constraints>
-                      <grid row="11" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                      <grid row="12" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false">
                         <preferred-size width="150" height="25"/>
                       </grid>
                     </constraints>
@@ -708,7 +670,7 @@
                   </component>
                   <component id="fa603" class="javax.swing.JLabel" binding="prefixToAddMethodLabel">
                     <constraints>
-                      <grid row="10" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                      <grid row="11" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
                         <preferred-size width="59" height="16"/>
                       </grid>
                     </constraints>
@@ -719,7 +681,7 @@
                   </component>
                   <component id="6f19d" class="javax.swing.JLabel">
                     <constraints>
-                      <grid row="13" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                      <grid row="14" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
                         <preferred-size width="122" height="16"/>
                       </grid>
                     </constraints>
@@ -730,7 +692,7 @@
                   </component>
                   <component id="d2eca" class="javax.swing.JLabel">
                     <constraints>
-                      <grid row="13" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                      <grid row="14" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
                         <preferred-size width="167" height="16"/>
                       </grid>
                     </constraints>
@@ -741,7 +703,7 @@
                   </component>
                   <component id="4c675" class="javax.swing.JLabel">
                     <constraints>
-                      <grid row="13" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                      <grid row="14" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                     </constraints>
                     <properties>
                       <foreground color="-7236458"/>
@@ -750,7 +712,7 @@
                   </component>
                   <component id="ce63f" class="javax.swing.JTextField" binding="methodParameterTypeTextBox3">
                     <constraints>
-                      <grid row="19" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                      <grid row="20" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                         <preferred-size width="150" height="25"/>
                       </grid>
                     </constraints>
@@ -761,7 +723,7 @@
                   </component>
                   <component id="52ff9" class="javax.swing.JTextField" binding="methodParamterNameTextBox1">
                     <constraints>
-                      <grid row="17" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                      <grid row="18" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                         <preferred-size width="150" height="25"/>
                       </grid>
                     </constraints>
@@ -773,7 +735,7 @@
                   </component>
                   <component id="98773" class="javax.swing.JComboBox" binding="methodParameterTypeComboBox2">
                     <constraints>
-                      <grid row="18" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                      <grid row="19" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="0" indent="0" use-parent-layout="false">
                         <preferred-size width="167" height="25"/>
                       </grid>
                     </constraints>
@@ -795,7 +757,7 @@
                   </component>
                   <component id="4d8e2" class="javax.swing.JComboBox" binding="methodParameterTypeComboBox1">
                     <constraints>
-                      <grid row="17" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                      <grid row="18" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="0" indent="0" use-parent-layout="false">
                         <preferred-size width="167" height="25"/>
                       </grid>
                     </constraints>
@@ -817,7 +779,7 @@
                   </component>
                   <component id="44d5a" class="javax.swing.JLabel">
                     <constraints>
-                      <grid row="16" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                      <grid row="17" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
                         <preferred-size width="167" height="16"/>
                       </grid>
                     </constraints>
@@ -828,7 +790,7 @@
                   </component>
                   <component id="9ef30" class="javax.swing.JLabel">
                     <constraints>
-                      <grid row="16" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                      <grid row="17" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
                         <preferred-size width="167" height="16"/>
                       </grid>
                     </constraints>
@@ -839,7 +801,7 @@
                   </component>
                   <component id="f030c" class="javax.swing.JComboBox" binding="methodParameterAnnotationComboBox1">
                     <constraints>
-                      <grid row="17" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                      <grid row="18" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="0" indent="0" use-parent-layout="false">
                         <preferred-size width="167" height="25"/>
                       </grid>
                     </constraints>
@@ -855,7 +817,7 @@
                   </component>
                   <component id="36fc5" class="javax.swing.JLabel">
                     <constraints>
-                      <grid row="16" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                      <grid row="17" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
                         <preferred-size width="167" height="16"/>
                       </grid>
                     </constraints>
@@ -866,7 +828,7 @@
                   </component>
                   <component id="bb035" class="javax.swing.JComboBox" binding="methodParameterAnnotationComboBox2">
                     <constraints>
-                      <grid row="18" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                      <grid row="19" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="0" indent="0" use-parent-layout="false">
                         <preferred-size width="167" height="25"/>
                       </grid>
                     </constraints>
@@ -883,7 +845,7 @@
                   </component>
                   <component id="3e046" class="javax.swing.JTextField" binding="methodParamterNameTextBox3">
                     <constraints>
-                      <grid row="19" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                      <grid row="20" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                         <preferred-size width="150" height="25"/>
                       </grid>
                     </constraints>
@@ -894,7 +856,7 @@
                   </component>
                   <component id="187ad" class="javax.swing.JComboBox" binding="methodParameterAnnotationComboBox3">
                     <constraints>
-                      <grid row="19" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                      <grid row="20" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="0" indent="0" use-parent-layout="false">
                         <preferred-size width="167" height="25"/>
                       </grid>
                     </constraints>
@@ -910,7 +872,7 @@
                   </component>
                   <component id="e9cbd" class="javax.swing.JTextField" binding="methodParamterNameTextBox2">
                     <constraints>
-                      <grid row="18" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                      <grid row="19" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                         <preferred-size width="150" height="25"/>
                       </grid>
                     </constraints>
@@ -921,7 +883,7 @@
                   </component>
                   <component id="2a21e" class="javax.swing.JButton" binding="addMethodButton">
                     <constraints>
-                      <grid row="21" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                      <grid row="22" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false">
                         <minimum-size width="75" height="25"/>
                         <preferred-size width="75" height="25"/>
                         <maximum-size width="75" height="25"/>
@@ -936,7 +898,7 @@
                   </component>
                   <component id="c6db4" class="javax.swing.JComboBox" binding="methodPrivacyMethodAdderComboBox">
                     <constraints>
-                      <grid row="14" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                      <grid row="15" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="0" indent="0" use-parent-layout="false">
                         <preferred-size width="167" height="25"/>
                       </grid>
                     </constraints>
@@ -952,7 +914,7 @@
                   </component>
                   <component id="67e53" class="javax.swing.JToolBar$Separator">
                     <constraints>
-                      <grid row="9" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                      <grid row="10" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
                     </constraints>
                     <properties/>
                   </component>
@@ -964,21 +926,59 @@
                   </component>
                   <component id="7f297" class="javax.swing.JToolBar$Separator">
                     <constraints>
-                      <grid row="20" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                      <grid row="21" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
                     </constraints>
                     <properties/>
                   </component>
                   <component id="e665c" class="javax.swing.JToolBar$Separator">
                     <constraints>
-                      <grid row="15" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                      <grid row="16" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
                     </constraints>
                     <properties/>
                   </component>
                   <component id="c72d5" class="javax.swing.JToolBar$Separator">
                     <constraints>
-                      <grid row="12" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                      <grid row="13" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
                     </constraints>
                     <properties/>
+                  </component>
+                  <component id="43a5b" class="javax.swing.JComboBox" binding="methodReturnTypeMethodAdderComboBox">
+                    <constraints>
+                      <grid row="15" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                        <preferred-size width="167" height="25"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <background color="-4144187"/>
+                      <font style="0"/>
+                      <model>
+                        <item value="void"/>
+                        <item value="String"/>
+                        <item value="long"/>
+                        <item value="int"/>
+                        <item value="boolean"/>
+                        <item value="char"/>
+                        <item value="byte"/>
+                        <item value="short"/>
+                        <item value="float"/>
+                        <item value="double"/>
+                      </model>
+                    </properties>
+                  </component>
+                  <component id="52f59" class="javax.swing.JButton" binding="MethodReplacerButton">
+                    <constraints>
+                      <grid row="7" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                        <minimum-size width="100" height="25"/>
+                        <preferred-size width="100" height="25"/>
+                        <maximum-size width="100" height="25"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <background color="-11775918"/>
+                      <font style="0"/>
+                      <foreground color="-5460820"/>
+                      <text value="Replace"/>
+                    </properties>
                   </component>
                 </children>
               </grid>
@@ -1055,45 +1055,19 @@
       </tabbedpane>
       <component id="bbde4" class="javax.swing.JToolBar$Separator">
         <constraints>
-          <grid row="3" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties/>
       </component>
-      <component id="4cbaf" class="javax.swing.JLabel">
-        <constraints>
-          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false">
-            <preferred-size width="59" height="16"/>
-          </grid>
-        </constraints>
-        <properties>
-          <foreground color="-7236458"/>
-          <text value="Theme"/>
-        </properties>
-      </component>
-      <component id="9d3b2" class="javax.swing.JComboBox" binding="themeComboBox">
-        <constraints>
-          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="0" indent="0" use-parent-layout="false">
-            <preferred-size width="100" height="25"/>
-          </grid>
-        </constraints>
-        <properties>
-          <background color="-4144187"/>
-          <font style="0"/>
-          <model>
-            <item value="Dark"/>
-            <item value="Light"/>
-          </model>
-        </properties>
-      </component>
       <component id="dfc6c" class="javax.swing.JToolBar$Separator">
         <constraints>
-          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties/>
       </component>
       <component id="648cf" class="javax.swing.JTextField" binding="srcPathTextBox">
         <constraints>
-          <grid row="5" column="0" row-span="1" col-span="15" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+          <grid row="5" column="0" row-span="1" col-span="14" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="200" height="25"/>
           </grid>
         </constraints>
@@ -1102,121 +1076,87 @@
           <text value=""/>
         </properties>
       </component>
-      <component id="79e44" class="javax.swing.JButton" binding="xButton" default-binding="true">
-        <constraints>
-          <grid row="0" column="16" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="5" fill="0" indent="0" use-parent-layout="false">
-            <preferred-size width="30" height="25"/>
-            <maximum-size width="50" height="25"/>
-          </grid>
-        </constraints>
-        <properties>
-          <background color="-4902354"/>
-          <font style="1"/>
-          <foreground color="-5460820"/>
-          <hideActionText value="false"/>
-          <text value="X"/>
-          <toolTipText value="Close"/>
-          <verticalAlignment value="0"/>
-        </properties>
-      </component>
       <component id="25b64" class="javax.swing.JToolBar$Separator">
         <constraints>
-          <grid row="6" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <grid row="6" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties/>
       </component>
       <component id="cd7a2" class="javax.swing.JToolBar$Separator">
         <constraints>
-          <grid row="6" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <grid row="6" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties/>
       </component>
       <component id="46e55" class="javax.swing.JToolBar$Separator">
         <constraints>
-          <grid row="6" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <grid row="6" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties/>
       </component>
       <component id="3f50a" class="javax.swing.JToolBar$Separator">
         <constraints>
-          <grid row="6" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <grid row="6" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties/>
       </component>
       <component id="7d946" class="javax.swing.JToolBar$Separator">
         <constraints>
-          <grid row="6" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <grid row="6" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties/>
       </component>
       <component id="37dcc" class="javax.swing.JToolBar$Separator">
         <constraints>
-          <grid row="6" column="7" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <grid row="6" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties/>
       </component>
       <component id="b51c7" class="javax.swing.JToolBar$Separator">
         <constraints>
-          <grid row="6" column="8" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <grid row="6" column="7" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties/>
       </component>
       <component id="83787" class="javax.swing.JToolBar$Separator">
         <constraints>
-          <grid row="6" column="9" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <grid row="6" column="8" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties/>
       </component>
       <component id="2b438" class="javax.swing.JToolBar$Separator">
         <constraints>
-          <grid row="6" column="10" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <grid row="6" column="9" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties/>
       </component>
       <component id="e5b8f" class="javax.swing.JToolBar$Separator">
         <constraints>
-          <grid row="6" column="11" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <grid row="6" column="10" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties/>
       </component>
       <component id="837e9" class="javax.swing.JToolBar$Separator">
         <constraints>
-          <grid row="6" column="12" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <grid row="6" column="11" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties/>
       </component>
       <component id="30335" class="javax.swing.JToolBar$Separator">
         <constraints>
-          <grid row="6" column="13" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <grid row="6" column="12" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties/>
       </component>
       <component id="d6b27" class="javax.swing.JToolBar$Separator">
         <constraints>
-          <grid row="6" column="14" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <grid row="6" column="13" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties/>
       </component>
-      <component id="d2958" class="javax.swing.JButton" binding="aboutButton">
-        <constraints>
-          <grid row="0" column="15" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="5" fill="0" indent="0" use-parent-layout="false">
-            <preferred-size width="30" height="25"/>
-            <maximum-size width="50" height="25"/>
-          </grid>
-        </constraints>
-        <properties>
-          <background color="-14801243"/>
-          <font style="1"/>
-          <foreground color="-5460820"/>
-          <hideActionText value="false"/>
-          <text value="?"/>
-          <toolTipText value="About"/>
-          <verticalAlignment value="0"/>
-        </properties>
-      </component>
       <component id="94e00" class="javax.swing.JButton" binding="chooseFileButton">
         <constraints>
-          <grid row="5" column="15" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false">
+          <grid row="5" column="14" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false">
             <minimum-size width="100" height="25"/>
             <preferred-size width="100" height="25"/>
             <maximum-size width="100" height="25"/>
@@ -1232,10 +1172,11 @@
       <grid id="d9b36" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
         <margin top="0" left="0" bottom="0" right="0"/>
         <constraints>
-          <grid row="8" column="0" row-span="1" col-span="12" vsize-policy="3" hsize-policy="3" anchor="1" fill="1" indent="0" use-parent-layout="false"/>
+          <grid row="8" column="0" row-span="1" col-span="11" vsize-policy="3" hsize-policy="3" anchor="1" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <background color="-12828864"/>
+          <font style="0"/>
         </properties>
         <border type="none"/>
         <children>
@@ -1250,6 +1191,16 @@
           </component>
         </children>
       </grid>
+      <component id="8e54b" class="javax.swing.JLabel" binding="infoText1">
+        <constraints>
+          <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font style="2"/>
+          <foreground color="-7236458"/>
+          <text value="Exact path location of package where you want to create classes"/>
+        </properties>
+      </component>
     </children>
   </grid>
 </form>

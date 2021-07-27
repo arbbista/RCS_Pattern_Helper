@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="RCS Pattern Helper:jar">
+    <output-path>$USER_HOME$/Desktop</output-path>
+    <root id="archive" name="RCS Pattern Helper.jar">
+      <element id="module-output" name="RCS_Pattern_Helper" />
+    </root>
+  </artifact>
+</component>

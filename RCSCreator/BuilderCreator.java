@@ -21,9 +21,8 @@ public class BuilderCreator {
             "\n" +
             "}";
 
-    //Create builder directory
+    //Create models directory
     File f = new File(path);
-    f.mkdir();
 
     // create the file name
     String pathWithFileName = path + "\\" + modelName + "Builder.java";

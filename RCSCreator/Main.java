@@ -9,10 +9,10 @@ import java.io.File;
 import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Objects;
 
 public class Main {
   private JPanel MainJpanel;
@@ -43,7 +43,6 @@ public class Main {
   private JComboBox attributePrivacycomboBox5;
   private JComboBox attributePrivacycomboBox6;
   private JComboBox attributePrivacycomboBox7;
-  private JButton xButton;
   private JLabel messageLabel;
   private JTextField RCSPrefixTextBox;
   private JTextField attributeNameTextBox8;
@@ -57,7 +56,6 @@ public class Main {
   private JTextField toTextBox;
   private JButton addMethodButton;
   private JTextField methodNameMethodAdderTextBox;
-  private JComboBox themeComboBox;
   private JButton MethodReplacerButton;
   private JTextField prefixToReplaceTextBox;
   private JTextField RCSPrefixTexBox;
@@ -75,8 +73,8 @@ public class Main {
   private JComboBox methodParameterAnnotationComboBox1;
   private JComboBox methodParameterAnnotationComboBox2;
   private JComboBox methodParameterAnnotationComboBox3;
-  private JButton aboutButton;
   private JPanel RCSCreatorJPanel;
+  private JLabel infoText1;
   private JPanel ModelBuilerBodyTabbedPane3;
 
   public Main() {
@@ -89,20 +87,20 @@ public class Main {
               //Create model
               if (!modelNameTextbox.getText().trim().isEmpty()) {
                 ModelCreator modelCreator = new ModelCreator(srcPathTextBox.getText(),
-                        modelNameTextbox.getText(), getAddedModelAttributes());
+                    modelNameTextbox.getText(), getAddedModelAttributes());
                 modelCreator.create();
 
                 //Create jooq mapper
                 if (CreateJooqMapperCheckBox.isSelected()) {
                   JooqMapperCreator jooqMapperCreator = new JooqMapperCreator(srcPathTextBox.getText(),
-                          modelNameTextbox.getText(), getAddedModelAttributes());
+                      modelNameTextbox.getText(), getAddedModelAttributes());
                   jooqMapperCreator.create();
                 }
 
                 //Create model builder
                 if (createBuilderCheckBox.isSelected()) {
                   BuilderCreator builderCreator = new BuilderCreator(srcPathTextBox.getText(),
-                          modelNameTextbox.getText(), getAddedModelAttributes());
+                      modelNameTextbox.getText(), getAddedModelAttributes());
                   builderCreator.create();
                 }
 
@@ -122,16 +120,9 @@ public class Main {
             }
           } catch (IOException ex) {
             JOptionPane.showMessageDialog(null, "Error creating file: \n" +
-                    ex.getMessage(), "Error", JOptionPane.WARNING_MESSAGE);
+                ex.getMessage(), "Error", JOptionPane.WARNING_MESSAGE);
           }
         }
-      }
-    });
-
-    xButton.addActionListener(new ActionListener() {
-      @Override
-      public void actionPerformed(ActionEvent e) {
-        System.exit(0);
       }
     });
 
@@ -179,25 +170,25 @@ public class Main {
           //Get method parameters and add it to the parameters list
           if (!methodParamterNameTextBox1.getText().trim().isEmpty()) {
             parameters.add(new AttributeModel(null, (String) methodParameterAnnotationComboBox1.getSelectedItem(),
-                    (String) methodParameterTypeComboBox1.getSelectedItem(),
-                    methodParamterNameTextBox1.getText()));
+                (String) methodParameterTypeComboBox1.getSelectedItem(),
+                methodParamterNameTextBox1.getText()));
           }
 
           if (!methodParamterNameTextBox2.getText().trim().isEmpty()) {
             parameters.add(new AttributeModel(null, (String) methodParameterAnnotationComboBox2.getSelectedItem(),
-                    (String) methodParameterTypeComboBox2.getSelectedItem(),
-                    methodParamterNameTextBox2.getText()));
+                (String) methodParameterTypeComboBox2.getSelectedItem(),
+                methodParamterNameTextBox2.getText()));
           }
 
           if (!methodParamterNameTextBox3.getText().trim().isEmpty()) {
             parameters.add(new AttributeModel(null, (String) methodParameterAnnotationComboBox3.getSelectedItem(),
-                    methodParameterTypeTextBox3.getText(),
-                    methodParamterNameTextBox3.getText()));
+                methodParameterTypeTextBox3.getText(),
+                methodParamterNameTextBox3.getText()));
           }
 
           MethodModel method = new MethodModel((String) methodPrivacyMethodAdderComboBox.getSelectedItem(),
-                  (String) methodReturnTypeMethodAdderComboBox.getSelectedItem(),
-                  methodNameMethodAdderTextBox.getText(), parameters);
+              (String) methodReturnTypeMethodAdderComboBox.getSelectedItem(),
+              methodNameMethodAdderTextBox.getText(), parameters);
 
           MethodAdder methodAdder = new MethodAdder(srcPathTextBox.getText(), prefixMethodAdderTextBox.getText(), method);
 
@@ -206,30 +197,8 @@ public class Main {
             showMessage("Method added successfully!", Color.green);
           } catch (IOException ex) {
             JOptionPane.showMessageDialog(null,
-                    "Error while writing/reading file:\n" + ex.getMessage(), "Error", JOptionPane.WARNING_MESSAGE);
+                "Error while writing/reading file:\n" + ex.getMessage(), "Error", JOptionPane.WARNING_MESSAGE);
           }
-        }
-      }
-    });
-
-    //Theme changer
-    themeComboBox.addActionListener(new ActionListener() {
-      @Override
-      public void actionPerformed(ActionEvent e) {
-        if (themeComboBox.getSelectedItem().toString().equals("Dark")) {
-          MainJpanel.setBackground(new Color(60, 63, 65));
-          ModelBuilerBodyTabbedPane.setBackground(new Color(60, 63, 65));
-          RCSToolsTabbedPane.setBackground(new Color(60, 63, 65));
-          RCSCreatorTabbedPane.setBackground(new Color(60, 63, 65));
-          RCSCreatorJPanel.setBackground(new Color(60, 63, 65));
-          RCSToolsJPanel.setBackground(new Color(60, 63, 65));
-        } else {
-          MainJpanel.setBackground(new Color(187, 187, 187));
-          ModelBuilerBodyTabbedPane.setBackground(new Color(187, 187, 187));
-          RCSToolsTabbedPane.setBackground(new Color(187, 187, 187));
-          RCSCreatorTabbedPane.setBackground(new Color(187, 187, 187));
-          RCSCreatorJPanel.setBackground(new Color(187, 187, 187));
-          RCSToolsJPanel.setBackground(new Color(187, 187, 187));
         }
       }
     });
@@ -246,13 +215,13 @@ public class Main {
             showMessage("Error to value: Please specify value you want to be replaced with", Color.red);
           } else {
             MethodReplacer methodReplacer = new MethodReplacer(srcPathTextBox.getText(),
-                    prefixToReplaceTextBox.getText(), fromTextBox.getText(), toTextBox.getText());
+                prefixToReplaceTextBox.getText(), fromTextBox.getText(), toTextBox.getText());
             try {
               methodReplacer.replace();
               showMessage("Method replaced successfully!", Color.green);
             } catch (IOException ex) {
               JOptionPane.showMessageDialog(null,
-                      "Error while writing/reading file:\n" + ex.getMessage(), "Error", JOptionPane.WARNING_MESSAGE);
+                  "Error while writing/reading file:\n" + ex.getMessage(), "Error", JOptionPane.WARNING_MESSAGE);
             }
           }
         }
@@ -288,14 +257,31 @@ public class Main {
         }
       }
     });
+  }
 
-    aboutButton.addActionListener(new ActionListener() {
-      @Override
-      public void actionPerformed(ActionEvent e) {
-        JOptionPane.showMessageDialog(null,
-                "Author: Arber Pllana\n" + "Contact: arbbista@gmail.com");
-      }
-    });
+  private static String getCurrentTimeUsingDate() {
+    Date date = new Date();
+    String strDateFormat = "kk:mm:ss";
+    DateFormat dateFormat = new SimpleDateFormat(strDateFormat);
+
+    return dateFormat.format(date);
+  }
+
+  public static void main(String[] args) throws IOException {
+    JFrame frame = new JFrame("RCS Pattern Helper");
+
+//    frame.setUndecorated(true); // Remove title bar
+
+    frame.setContentPane(new Main().MainJpanel);
+    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    frame.pack();
+    frame.setVisible(true);
+    frame.setLocationRelativeTo(null);
+
+    //Remove focus from inner components on startup
+    frame.requestFocusInWindow();
+
+    frame.setIconImage(ImageIO.read(Objects.requireNonNull(Main.class.getResourceAsStream("/images/app-icon.png"))));
   }
 
   private ArrayList<AttributeModel> getAddedModelAttributes() {
@@ -304,49 +290,49 @@ public class Main {
     //Add first attribute
     if (!attributeNameTextBox1.getText().trim().isEmpty()) {
       attributes.add(new AttributeModel((String) attributePrivacycomboBox1.getSelectedItem(),
-              (String) attributeTypecomboBox1.getSelectedItem(), attributeNameTextBox1.getText()));
+          (String) attributeTypecomboBox1.getSelectedItem(), attributeNameTextBox1.getText()));
     }
 
     //Add second attribute
     if (!attributeNameTextBox2.getText().trim().isEmpty()) {
       attributes.add(new AttributeModel((String) attributePrivacycomboBox2.getSelectedItem(),
-              (String) attributeTypecomboBox2.getSelectedItem(), attributeNameTextBox2.getText()));
+          (String) attributeTypecomboBox2.getSelectedItem(), attributeNameTextBox2.getText()));
     }
 
     //Add 3rd attribute
     if (!attributeNameTextBox3.getText().trim().isEmpty()) {
       attributes.add(new AttributeModel((String) attributePrivacycomboBox3.getSelectedItem(),
-              (String) attributeTypecomboBox3.getSelectedItem(), attributeNameTextBox3.getText()));
+          (String) attributeTypecomboBox3.getSelectedItem(), attributeNameTextBox3.getText()));
     }
 
     //Add 4th attribute
     if (!attributeNameTextBox4.getText().trim().isEmpty()) {
       attributes.add(new AttributeModel((String) attributePrivacycomboBox4.getSelectedItem(),
-              (String) attributeTypecomboBox4.getSelectedItem(), attributeNameTextBox4.getText()));
+          (String) attributeTypecomboBox4.getSelectedItem(), attributeNameTextBox4.getText()));
     }
 
     //Add 5th attribute
     if (!attributeNameTextBox5.getText().trim().isEmpty()) {
       attributes.add(new AttributeModel((String) attributePrivacycomboBox5.getSelectedItem(),
-              (String) attributeTypecomboBox5.getSelectedItem(), attributeNameTextBox5.getText()));
+          (String) attributeTypecomboBox5.getSelectedItem(), attributeNameTextBox5.getText()));
     }
 
     //Add 6th attribute
     if (!attributeNameTextBox6.getText().trim().isEmpty()) {
       attributes.add(new AttributeModel((String) attributePrivacycomboBox6.getSelectedItem(),
-              (String) attributeTypecomboBox6.getSelectedItem(), attributeNameTextBox6.getText()));
+          (String) attributeTypecomboBox6.getSelectedItem(), attributeNameTextBox6.getText()));
     }
 
     //Add 7th attribute
     if (!attributeNameTextBox7.getText().trim().isEmpty()) {
       attributes.add(new AttributeModel((String) attributePrivacycomboBox7.getSelectedItem(),
-              attributeTypeTextBox1.getText(), attributeNameTextBox7.getText()));
+          attributeTypeTextBox1.getText(), attributeNameTextBox7.getText()));
     }
 
     //Add 8th attribute
     if (!attributeNameTextBox8.getText().trim().isEmpty()) {
       attributes.add(new AttributeModel((String) attributePrivacycomboBox7.getSelectedItem(),
-              attributeTypeTextBox2.getText(), attributeNameTextBox7.getText()));
+          attributeTypeTextBox2.getText(), attributeNameTextBox7.getText()));
     }
 
     return attributes;
@@ -389,34 +375,9 @@ public class Main {
     return controller.exists() || service.exists() || serviceImpl.exists() || repository.exists() || repositoryImpl.exists();
   }
 
-  private static String getCurrentTimeUsingDate() {
-    Date date = new Date();
-    String strDateFormat = "kk:mm:ss";
-    DateFormat dateFormat = new SimpleDateFormat(strDateFormat);
-
-    return dateFormat.format(date);
-  }
-
   private void showMessage(String message, Color color) {
     messageLabel.setForeground(color);
     messageLabel.setText("(" + getCurrentTimeUsingDate() + ") " + message);
-  }
-
-  public static void main(String[] args) throws IOException {
-    JFrame frame = new JFrame("RCS Pattern Helper");
-
-    frame.setUndecorated(true); // Remove title bar
-
-    frame.setContentPane(new Main().MainJpanel);
-    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-    frame.pack();
-    frame.setVisible(true);
-    frame.setLocationRelativeTo(null);
-
-    //Remove focus from inner components on startup
-    frame.requestFocusInWindow();
-
-    frame.setIconImage(ImageIO.read(Main.class.getResourceAsStream("/images/app-icon.png")));
   }
 
   private void createUIComponents() {

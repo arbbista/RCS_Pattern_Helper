@@ -1,10 +1,10 @@
 import java.io.*;
 
-//All commong methods are written here
+//All common methods are written here
 public class Commons {
   public static String convertPathToPackage(String path) {
-    String packageName = path.substring(path.indexOf("com\\")); // get only specific path
-    return packageName.replace('\\', '.'); //Replace backslashes with dots
+    String packageName = path.substring(path.indexOf("com")).toLowerCase(); // get only specific path
+    return packageName.replace('/', '.'); //Replace backslashes with dots
   }
 
   public static void write(String path, String text) throws IOException {

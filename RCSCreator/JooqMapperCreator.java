@@ -59,9 +59,8 @@ public class JooqMapperCreator {
             "\n" +
             "}";
 
-    //Create jooqMapper directory
+    //Create models directory
     File f = new File(path);
-    f.mkdir();
 
     // create the file name
     String pathWithFileName = path + "\\" + modelName + "JooqMapper.java";

@@ -62,10 +62,10 @@ public class RCSCreator {
             "\n" +
             "}";
 
-    Commons.write(path + "\\" + prefix + "Controller.java", controllerFile);
-    Commons.write(path + "\\" + prefix + "Service.java", serviceFile);
-    Commons.write(path + "\\" + prefix + "ServiceImpl.java", serviceImplFile);
-    Commons.write(path + "\\" + prefix + "Repository.java", repositoryFile);
-    Commons.write(path + "\\" + prefix + "RepositoryImpl.java", repositoryImplFile);
+    Commons.write(path + "/" + prefix + "Controller.java", controllerFile);
+    Commons.write(path + "/" + prefix + "Service.java", serviceFile);
+    Commons.write(path + "/" + prefix + "ServiceImpl.java", serviceImplFile);
+    Commons.write(path + "/" + prefix + "Repository.java", repositoryFile);
+    Commons.write(path + "/" + prefix + "RepositoryImpl.java", repositoryImplFile);
   }
 }
